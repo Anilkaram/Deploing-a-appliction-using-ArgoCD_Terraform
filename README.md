@@ -1,9 +1,9 @@
 # 🚀 Deploying an Application Using ArgoCD & Terraform
 This project demonstrates a GitOps-based deployment pipeline using the following stack:
-*Terraform to provision infrastructure
-*KOPS to create a Kubernetes cluster on AWS
-*Helm to install Argo CD on the cluster
-*Argo CD to deploy applications from a Git repository
+#Terraform to provision infrastructure
+#KOPS to create a Kubernetes cluster on AWS
+#Helm to install Argo CD on the cluster
+#Argo CD to deploy applications from a Git repository
 
 1. Infrastructure as Code with Terraform
      EC2 instances for installing applications
