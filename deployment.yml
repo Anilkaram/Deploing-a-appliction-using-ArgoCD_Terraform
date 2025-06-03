@@ -19,7 +19,7 @@ spec:
       - name: my-container
         image: anildoc143/nginx:travel
         ports:
-          - containerPort: 5000
+          - containerPort: 80
         # volumeMounts:
         #   - name: my-volume
         #     mountPath: /usr/src/app
