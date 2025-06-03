@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mydeployment
+  namespace: dev
   annotations:
     kubernetes.io/change-cause: "new deploy for robo website"
 spec:
