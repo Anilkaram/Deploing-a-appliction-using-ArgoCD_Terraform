@@ -20,9 +20,6 @@ spec:
         image: anildoc143/nginx:travel
         ports:
           - containerPort: 80
-        # volumeMounts:
-        #   - name: my-volume
-        #     mountPath: /usr/src/app
         resources:
           requests:
             cpu: "100m"
@@ -30,3 +27,15 @@ spec:
           limits:
             cpu: "300m"
             memory: "500Mi"
+        livenessProbe:  # Added liveness probe for better monitoring
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        readinessProbe:  # Added readiness probe to handle traffic only when ready
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 3
+          periodSeconds: 5
