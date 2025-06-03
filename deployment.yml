@@ -1,0 +1,32 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mydeployment
+  namespace: dev
+  annotations:
+    kubernetes.io/change-cause: "new deploy for robo website"
+spec:
+  selector:
+    matchLabels:
+      app: my-app
+  template: 
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers: 
+      - name: my-container
+        image: anildoc143/nginx:travel
+        ports:
+          - containerPort: 5000
+        # volumeMounts:
+        #   - name: my-volume
+        #     mountPath: /usr/src/app
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "200Mi"
+          limits:
+            cpu: "300m"
+            memory: "500Mi"
