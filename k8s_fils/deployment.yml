@@ -17,7 +17,7 @@ spec:
     spec:
       containers: 
       - name: my-container
-        image: sevenajay/mario:latest 
+        image: anildoc143/nginx:mario
         ports:
           - containerPort: 80
         resources:
